@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SumNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Ask user for the limit
+        System.out.print("Enter a positive number: ");
+        int limit = sc.nextInt();
+
+        int sum = 0;
+        int i = 1;
+
+        // while loop to add natural numbers up to limit
+        while (i <= limit) {
+            sum += i;  // add i to sum
+            i++;       // increment i
+        }
+
+        // display result
+        System.out.println("The sum of natural numbers up to " + limit + " is: " + sum);
+
+        sc.close();
+    }
+}
