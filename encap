@@ -1,0 +1,27 @@
+class BankAccount {
+    private double balance;
+
+    void deposit(double amount) {
+        balance += amount;
+    }
+
+    void withdraw(double amount) {
+        if (amount <= balance)
+            balance -= amount;
+        else
+            System.out.println("Insufficient funds!");
+    }
+
+    double getBalance() {
+        return balance;
+    }
+}
+
+public class BankTest {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(500);
+        System.out.println("Balance: " + account.getBalance());
+    }
+}
